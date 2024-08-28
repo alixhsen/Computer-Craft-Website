@@ -1,0 +1,445 @@
+﻿@page
+@model Computer_Craft.Pages.AdminDashboard.UsersModel
+@{
+    Layout = null;
+    var message = TempData["Message"] as string;
+    var messageType = TempData["MessageType"] as string;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Users</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/adminstyle.css">
+    <link rel="icon" href="~/Images/Logo/laptop.svg" type="image/x-icon" />
+    <style>
+        /* General button styles */
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 2px;
+        }
+
+        /* Update button styles */
+        .btn-update {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-update:hover {
+            background-color: #0056b3;
+        }
+
+        /* Delete button styles */
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+        
+
+        /*Activate Button Style*/
+
+           .btn-active {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-active:hover {
+                background-color: #218838;
+        }
+        
+        /*Inactive Button Style*/
+        .btn-inactive {
+            background-color: #dc3545;
+            color: white;
+        }
+
+            .btn-inactive:hover {
+                background-color: #c82333;
+            }
+
+
+        /* View Details button styles */
+        .btn-details {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-details:hover {
+            background-color: #218838;
+        }
+
+        /* Add New Laptop button styles */
+        .btn-add-new {
+            background-color: #0056b3; /* Change to a different color */
+            color: white;
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px 20px; /* Adjust padding */
+            font-size: 16px; /* Increase font size */
+            text-transform: uppercase; /* Uppercase text */
+            font-weight: bold; /* Bold text */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+            float: right;
+            transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+        }
+
+        .btn-add-new:hover {
+            background-color: #0056b3; /* Darker shade on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Styling for table images */
+        table img {
+            max-width: 50px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Optional: add some space around table rows */
+        table tr {
+            padding: 8px 0;
+        }
+
+        main .recent-products table {
+            background-color: var(--color-white);
+            width: 140%; /* Adjusted width to fit container */
+            padding: var(--card-padding);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--card-border-radius);
+            transition: all 0.3s ease;
+        }
+
+        .recent-products {
+            margin-bottom: 20px;
+        }
+
+        .action-container{
+            display: flex;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <!--!Font Awesome Free 6.6.0 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#007bff" d="M218.3 8.5c12.3-11.3 31.2-11.3 43.4 0l208 192c6.7 6.2 10.3 14.8 10.3 23.5l-144 0c-19.1 0-36.3 8.4-48 21.7l0-37.7c0-8.8-7.2-16-16-16l-64 0c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l64 0 0 128-160 0c-26.5 0-48-21.5-48-48l0-112-32 0c-13.2 0-25-8.1-29.8-20.3s-1.6-26.2 8.1-35.2l208-192zM352 304l0 144 192 0 0-144-192 0zm-48-16c0-17.7 14.3-32 32-32l224 0c17.7 0 32 14.3 32 32l0 160 32 0c8.8 0 16 7.2 16 16c0 26.5-21.5 48-48 48l-48 0-192 0-48 0c-26.5 0-48-21.5-48-48c0-8.8 7.2-16 16-16l32 0 0-160z" />
+                    </svg>
+                    <h2>Computer<span class="danger"> Craft</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <!-- Sidebar links here -->
+                <a href="/AdminDashboard/Dashboard">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/AdminDashboard/Orders">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="/AdminDashboard/Users" class="active">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardDesktop">
+                    <span class="material-icons-sharp">desktop_windows</span>
+                    <h3>Desktops</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardLaptop">
+                    <span class="material-icons-sharp">laptop_mac</span>
+                    <h3>Laptops</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardNetwork">
+                    <span class="material-icons-sharp">router</span>
+                    <h3>Network Parts</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardSecurity">
+                    <span class="material-icons-sharp">vpn_key</span>
+                    <h3>Security Parts</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardComponents">
+                    <span class="material-icons-sharp">important_devices</span>
+                    <h3>Components</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardAccessories">
+                    <span class="material-icons-sharp">phonelink</span>
+                    <h3>Accessories</h3>
+                </a>
+                <a href="/AdminDashboard/AddAdmin">
+                    <span class="material-icons-sharp">person_add</span>
+                    <h3>New Admin</h3>
+                </a>
+                <a href="/Logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        
+        <main>
+            <h1>Users</h1>
+            <div class="recent-products">
+                <div style="margin-bottom: 20px;">
+                    <a href="/AdminDashboard/AddSupplier" class="btn-add-new">Add New Supplier</a>
+                </div>
+                <h2>All Suppliers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>National Number</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example laptop rows -->
+                        @{
+                            foreach (var supplier in Model.suppliers)
+                            {
+                                <tr>
+                                    <td>@supplier.NationalId</td>
+                                    <td>@supplier.Name</td>
+                                    <td>@supplier.PhoneNumber</td>
+                                    <td>@supplier.Address</td>                       
+                                    <td class="action-container">
+                                        <form asp-page-handler="delete" asp-route-id="@supplier.NationalId" method="post">
+                                            <button type="submit" class="btn-delete">Delete</button>
+                                        </form>
+                                        <button class="btn-update" onclick="redirectToUpdatePerson('@supplier.NationalId')">Update</button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+
+            <hr />
+
+            <div class="recent-products">
+                <div style="margin-bottom: 20px;">
+                    <a href="/AdminDashboard/AddDelivery" class="btn-add-new">Add New Delivery</a>
+                </div>
+                <h2>All Deliveries</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>National Number</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Address</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example laptop rows -->
+                        @{
+                            foreach (var delivery in Model.deliveries)
+                            {
+                                <tr>
+                                    <td>@delivery.NationalId</td>
+                                    <td>@delivery.Name</td>
+                                    <td>@delivery.PhoneNumber</td>
+                                    <td>@delivery.Address</td>
+                                    <td>@delivery.IsActive</td>
+                                    <td class="action-container">
+                                        <form asp-page-handler="Activate" asp-route-id="@delivery.NationalId" method="post">
+                                            <button type="submit" class="btn-active">Activate</button>
+                                        </form>
+                                        <form asp-page-handler="Inactivate" asp-route-id="@delivery.NationalId" method="post">
+                                            <button type="submit" class="btn-inactive">Inactivate</button>
+                                        </form>
+                                        <button class="btn-view" onclick="redirectToOrder('@delivery.NationalId')">View Orders</button>
+                                        <button class="btn-update" onclick="redirectToUpdatePerson('@delivery.NationalId')">Update</button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+
+            <hr />
+            <div class="recent-products">
+                <div style="margin-bottom: 20px;">
+                    <a href="/AdminDashboard/AddAdmin" class="btn-add-new">Add New Admin</a>
+                </div>
+                <h2>All Admins</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example laptop rows -->
+                        @{
+                            foreach (var admin in Model.admins)
+                            {
+                                <tr>
+                                    <td>@admin.Fname</td>
+                                    <td>@admin.Lname</td>
+                                    <td>@admin.Username</td>
+                                    <td>@admin.Password</td>
+                                    <td class="action-container">
+                                        <form asp-page-handler="deleteAdmin" asp-route-id="@admin.AdminId" method="post">
+                                            <button type="submit" class="btn-delete">Delete</button>
+                                        </form>
+                                        <button class="btn-update" onclick="redirectToUpdateAdmin('@admin.Username')">Reset Password</button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+
+            <hr />
+
+            <div class="recent-products">         
+                <h2>All Customers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>National Number</th>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Address</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example laptop rows -->
+                        @{
+                            foreach (var customer in Model.persons)
+                            {
+                                <tr>
+                                    <td>@customer.NationalId</td>
+                                    <td>@customer.Name</td>
+                                    <td>@customer.PhoneNumber</td>
+                                    <td>@customer.Email</td>
+                                    <td>@customer.Username</td>
+                                    <td>@customer.Address</td>           
+                                </tr>
+                            }
+                        }
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.btn-delete').forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    const form = this.closest('form'); // Find the closest form element
+                    const id = this.getAttribute('data-id');
+
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, delete it!',
+                        cancelButtonText: 'No, cancel!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit(); // Submit the form if confirmed
+                        }
+                    });
+                });
+            });
+
+            document.querySelectorAll('.btn-inactive').forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    const form = this.closest('form'); // Find the closest form element
+                    const id = this.getAttribute('data-id');
+
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "This Delivery will not able to get orders any more!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, Deactive!',
+                        cancelButtonText: 'No, cancel!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit(); // Submit the form if confirmed
+                        }
+                    });
+                });
+            });
+                // SweetAlert for message display (existing code)
+                var message = "@message";
+                var messageType = "@messageType";
+
+                if (message) {
+                    Swal.fire({
+                        icon: messageType,
+                        title: messageType === 'success' ? 'Success' : 'Error',
+                        text: message
+                    }).then(() => {
+                        if (messageType === 'success') {
+                            window.location.href = '/AdminDashboard/Users';
+                        }
+                    });
+                }
+        });
+    </script>
+    <script>
+        function redirectToOrder(id) {
+            window.location.href = `/AdminDashboard/DeliveryOrders?id=${id}`;
+        }
+    </script>
+    <script>
+        function redirectToUpdateAdmin(id) {
+            window.location.href = `/AdminDashboard/UpdateAdmin?id=${id}`;
+        }
+    </script>
+    <script>
+        function redirectToUpdatePerson(id, brandName) {
+            const encodedBrandName = encodeURIComponent(brandName); // Encode the brand name to handle special characters
+            window.location.href = `/AdminDashboard/UpdatePerson?id=${id}`;
+        }
+
+    </script>
+    <script src="~/js/dashboard.js"></script>
+</body>
+</html>

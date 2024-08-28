@@ -1,0 +1,673 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Computer Craft.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Computer Craft.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\15U-MS-EWM6615B.jpg",
+      "PackagePath": "staticwebassets\\Images\\15U-MS-EWM6615B.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\1678-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\1678-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\2053-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\2053-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\2249-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\2249-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\2697-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\2697-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\2__00540.jpg",
+      "PackagePath": "staticwebassets\\Images\\2__00540.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\7-5800X.jpg",
+      "PackagePath": "staticwebassets\\Images\\7-5800X.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\A4-TECH-1-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\A4-TECH-1-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\A520M-HVS-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\A520M-HVS-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\AD4U320016G22-RGN.jpg",
+      "PackagePath": "staticwebassets\\Images\\AD4U320016G22-RGN.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\AD5U560032G-S.jpg",
+      "PackagePath": "staticwebassets\\Images\\AD5U560032G-S.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\ADATA DDR3.jpg",
+      "PackagePath": "staticwebassets\\Images\\ADATA DDR3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\AR-FS116-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\AR-FS116-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\ASUS Vivobook.webp",
+      "PackagePath": "staticwebassets\\Images\\ASUS Vivobook.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\ASUS-GTX1650-4GB-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\ASUS-GTX1650-4GB-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Acer Aspire 5.jpg",
+      "PackagePath": "staticwebassets\\Images\\Acer Aspire 5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Acer Extensa.jpg",
+      "PackagePath": "staticwebassets\\Images\\Acer Extensa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\ads.webp",
+      "PackagePath": "staticwebassets\\Images\\Ads\\ads.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\apple.png",
+      "PackagePath": "staticwebassets\\Images\\Ads\\apple.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\apple.webp",
+      "PackagePath": "staticwebassets\\Images\\Ads\\apple.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\fixx.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ads\\fixx.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\freeDelivery.jpg",
+      "PackagePath": "staticwebassets\\Images\\Ads\\freeDelivery.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\gaming.png",
+      "PackagePath": "staticwebassets\\Images\\Ads\\gaming.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\smart.png",
+      "PackagePath": "staticwebassets\\Images\\Ads\\smart.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Ads\\smart.webp",
+      "PackagePath": "staticwebassets\\Images\\Ads\\smart.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\B2100.jpg",
+      "PackagePath": "staticwebassets\\Images\\B2100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Categories\\laptopCategory.jpg",
+      "PackagePath": "staticwebassets\\Images\\Categories\\laptopCategory.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Categories\\network.jpg",
+      "PackagePath": "staticwebassets\\Images\\Categories\\network.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Categories\\security System.png",
+      "PackagePath": "staticwebassets\\Images\\Categories\\security System.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\DELL Ltitude 2.jpg",
+      "PackagePath": "staticwebassets\\Images\\DELL Ltitude 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\DH-PFS3006-4ET-36-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\DH-PFS3006-4ET-36-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\DHI-ASA1222G-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\DHI-ASA1222G-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\DHI-NVR4108H-8P-4KS2-L.jpg",
+      "PackagePath": "staticwebassets\\Images\\DHI-NVR4108H-8P-4KS2-L.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Gaming Lenovo.jpg",
+      "PackagePath": "staticwebassets\\Images\\Gaming Lenovo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\HDW2401RP-Z-4MP.jpg",
+      "PackagePath": "staticwebassets\\Images\\HDW2401RP-Z-4MP.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\HP 15.6 Laptop.jpg",
+      "PackagePath": "staticwebassets\\Images\\HP 15.6 Laptop.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\HP EliteBook 640 G9.webp",
+      "PackagePath": "staticwebassets\\Images\\HP EliteBook 640 G9.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\HPE-SERVER-DL360-G10-1-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\HPE-SERVER-DL360-G10-1-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\HU-30-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\HU-30-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Items\\test.webp",
+      "PackagePath": "staticwebassets\\Images\\Items\\test.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\LOGITECH-M170-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\LOGITECH-M170-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Lenovo IdeaPad 3 15ALC6.jpg",
+      "PackagePath": "staticwebassets\\Images\\Lenovo IdeaPad 3 15ALC6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Lenovo IdeaPad Slim 3.webp",
+      "PackagePath": "staticwebassets\\Images\\Lenovo IdeaPad Slim 3.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Lenovo ThinkPad E15.webp",
+      "PackagePath": "staticwebassets\\Images\\Lenovo ThinkPad E15.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Logo\\1.png",
+      "PackagePath": "staticwebassets\\Images\\Logo\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Logo\\adminprofile.png",
+      "PackagePath": "staticwebassets\\Images\\Logo\\adminprofile.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Logo\\alihsen.jpg",
+      "PackagePath": "staticwebassets\\Images\\Logo\\alihsen.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Logo\\batoul.jpg",
+      "PackagePath": "staticwebassets\\Images\\Logo\\batoul.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Logo\\computercraft.png",
+      "PackagePath": "staticwebassets\\Images\\Logo\\computercraft.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Logo\\laptop.svg",
+      "PackagePath": "staticwebassets\\Images\\Logo\\laptop.svg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\PK-017F.jpg",
+      "PackagePath": "staticwebassets\\Images\\PK-017F.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\PRODUCT_IMAGE550_2__24059.jpg",
+      "PackagePath": "staticwebassets\\Images\\PRODUCT_IMAGE550_2__24059.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\PRscdvvdODUCT_IMAGE__12337.webp",
+      "PackagePath": "staticwebassets\\Images\\PRscdvvdODUCT_IMAGE__12337.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\Q100.jpg",
+      "PackagePath": "staticwebassets\\Images\\Q100.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\RT-AC51U-AC750-2.jpg",
+      "PackagePath": "staticwebassets\\Images\\RT-AC51U-AC750-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\WNIR3200-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\WNIR3200-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\X570-PRO4-1.jpg",
+      "PackagePath": "staticwebassets\\Images\\X570-PRO4-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\app2__76487.webp",
+      "PackagePath": "staticwebassets\\Images\\app2__76487.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\apple macbook air 13.jpg",
+      "PackagePath": "staticwebassets\\Images\\apple macbook air 13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\apple macbook pro 14.webp",
+      "PackagePath": "staticwebassets\\Images\\apple macbook pro 14.webp"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\Images\\mac-mini__34178.1684402350.1280.1280__77333.jpg",
+      "PackagePath": "staticwebassets\\Images\\mac-mini__34178.1684402350.1280.1280__77333.jpg"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\adminlogin.css",
+      "PackagePath": "staticwebassets\\css\\adminlogin.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\adminstyle.css",
+      "PackagePath": "staticwebassets\\css\\adminstyle.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\login.css",
+      "PackagePath": "staticwebassets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\loginas.css",
+      "PackagePath": "staticwebassets\\css\\loginas.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\register.css",
+      "PackagePath": "staticwebassets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\AdminScript.js",
+      "PackagePath": "staticwebassets\\js\\AdminScript.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\adminlogin.js",
+      "PackagePath": "staticwebassets\\js\\adminlogin.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\cartscript.js",
+      "PackagePath": "staticwebassets\\js\\cartscript.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\loginscript.js",
+      "PackagePath": "staticwebassets\\js\\loginscript.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\main.js",
+      "PackagePath": "staticwebassets\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\registerscript.js",
+      "PackagePath": "staticwebassets\\js\\registerscript.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\animate\\animate.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\lib\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\counterup\\counterup.min.js",
+      "PackagePath": "staticwebassets\\lib\\counterup\\counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\easing\\easing.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\easing\\easing.min.js",
+      "PackagePath": "staticwebassets\\lib\\easing\\easing.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\lightbox\\css\\lightbox.min.css",
+      "PackagePath": "staticwebassets\\lib\\lightbox\\css\\lightbox.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\lightbox\\images\\close.png",
+      "PackagePath": "staticwebassets\\lib\\lightbox\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\lightbox\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\lib\\lightbox\\images\\loading.gif"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\lightbox\\images\\next.png",
+      "PackagePath": "staticwebassets\\lib\\lightbox\\images\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\lightbox\\images\\prev.png",
+      "PackagePath": "staticwebassets\\lib\\lightbox\\images\\prev.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\lightbox\\js\\lightbox.min.js",
+      "PackagePath": "staticwebassets\\lib\\lightbox\\js\\lightbox.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.default.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.theme.green.min.css",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.theme.green.min.css"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\assets\\owl.video.play.png",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\assets\\owl.video.play.png"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\owlcarousel\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\lib\\owlcarousel\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\waypoints\\links.php",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\links.php"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\waypoints\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\lib\\waypoints\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\wow\\wow.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.js"
+    },
+    {
+      "Id": "C:\\Users\\user\\OneDrive\\Desktop\\Senior Project\\Computer Craft\\Computer Craft\\wwwroot\\lib\\wow\\wow.min.js",
+      "PackagePath": "staticwebassets\\lib\\wow\\wow.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Computer Craft.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Computer Craft.props",
+      "PackagePath": "build\\Computer Craft.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Computer Craft.props",
+      "PackagePath": "buildMultiTargeting\\Computer Craft.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Computer Craft.props",
+      "PackagePath": "buildTransitive\\Computer Craft.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

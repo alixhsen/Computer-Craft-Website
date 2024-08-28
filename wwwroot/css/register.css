@@ -1,0 +1,69 @@
+﻿body {
+}
+.password-container {
+    position: relative;
+}
+
+    .password-container input {
+        padding-right: 2.5rem; /* Add space for the icon */
+    }
+
+    .password-container .fa-eye {
+        position: absolute;
+        top: 50%;
+        right: 10px; /* Adjust as needed */
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6c757d; /* Optional: color for the icon */
+    }
+
+    .password-container .fa-eye-slash {
+        position: absolute;
+        top: 50%;
+        right: 10px; /* Adjust as needed */
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #6c757d; /* Optional: color for the icon */
+    }
+
+/* General styling for form inputs */
+.form-control {
+    border-radius: 0; /* Sharp borders */
+    border: 2px solid var(--bs-dark); /* Border color */
+    box-shadow: none; /* Remove default shadow */
+}
+
+    .form-control:focus {
+        border-color: var(--bs-dark); /* Border color on focus */
+        box-shadow: none; /* Remove default shadow */
+    }
+
+/* Styling for the submit button */
+.btn-primary {
+    border-radius: 0; /* Sharp corners (rectangle) */
+    background-color: var(--bs-dark); /* Button background color */
+    border-color: var(--bs-dark); /* Button border color */
+    color: white; /* Button text color */
+    font-weight: bold; /* Make text bold */
+}
+
+    .btn-primary:hover {
+        background-color: white; /* Background color on hover */
+        color: var(--bs-dark); /* Text color on hover */
+        border-color: var(--bs-dark); /* Border color on hover */
+    }
+
+/* Styling for modal close button */
+#close-model {
+    background-color: var(--bs-dark); /* Button background color */
+    border-color: var(--bs-dark); /* Button border color */
+    border-radius: 0; /* Sharp corners */
+    color: white; /* Button text color */
+}
+
+    #close-model:hover {
+        background-color: white; /* Background color on hover */
+        color: var(--bs-dark); /* Text color on hover */
+        border-color: var(--bs-dark); /* Border color on hover */
+    }
+

@@ -1,0 +1,387 @@
+﻿@inject IHttpContextAccessor HttpContectAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Computer_Craft</title>
+
+    <link rel="icon" href="~/Images/Logo/laptop.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Computer_Craft.styles.css" asp-append-version="true" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="~/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="~/css/style.css" rel="stylesheet" />
+
+        <style>
+            body{
+                font-family: 'Karla';
+            }
+        footer {
+            font-family: 'Karla', sans-serif;
+        }
+
+        .footer-links a {
+            color: #343a40;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+            .footer-links a::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scaleX(0);
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #007bff;
+                transform-origin: bottom right;
+                transition: transform 0.3s ease-out;
+            }
+
+            .footer-links a:hover::after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+            }
+
+            .footer-links a:hover {
+                color: #007bff;
+            }
+
+        .footer-logo {
+            max-width: 150px;
+            margin-top: 15px;
+        }
+
+
+        /* Floating buttons */
+        .floating-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+            .floating-buttons .btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: var(--bs-dark);
+                color: #fff;
+                border: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s ease;
+            }
+
+
+            .floating-buttons .btn-text {
+                display: none;
+                position: absolute;
+                right: 60px; /* Adjust this to control the distance from the button */
+                background-color: var(--bs-dark);
+                color: #fff;
+                padding: 5px 10px;
+                border-radius: 5px;
+                white-space: nowrap;
+                font-size: 14px;
+            }
+
+            .floating-buttons .btn:hover .btn-text {
+                display: block;
+            }
+        </style>
+
+</head>
+<body>
+    <header>
+        <!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-none d-lg-block">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="border-end border-primary pe-3">
+                                <a href="https://maps.app.goo.gl/6v4xB4K5dMmtPuWr6" target="_blank" class="text-muted small"><i class="fas fa-map-marker-alt me-2" style="color: #007bff"></i>Beirut, Lebanon</a>
+                            </div>
+                            <div class="ps-3">
+                                <a href="mailto:computercraft@gmail.com" class="text-muted small"><i class="fas fa-envelope me-2" style="color: #007bff"></i>computercraft@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-primary pe-3">
+                                <a class="btn p-0  me-3" href="#" style="color: #007bff"><i class="fab fa-whatsapp"></i></a>
+                                <a class="btn p-0  me-3" href="#" style="color: #007bff"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0  me-3" href="#" style="color: #007bff"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="dropdown ms-3 pe-3 d-flex border-end border-primary">
+                                @{
+                                    if (string.IsNullOrEmpty(HttpContectAccessor.HttpContext.Session.GetString("username")))
+                                    {
+                                        <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown"><small><i class="fas fa-user me-2" style="color: #007bff"></i> Login</small></a>
+                                        <div class="dropdown-menu rounded">
+                                            <a href="/Login" class="dropdown-item">Login</a>
+                                            <a href="/Register" class="dropdown-item">Register</a>
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <a href="/Logout" class="dropdown-item">
+                                            <i class="fas fa-sign-out-alt" style="color: #007bff"></i>
+                                            Logout
+                                        </a>
+                                    }
+                                }
+                            </div>
+                            <div class="ms-3">
+                                <a class="btn p-0  me-3" href="/Cart" style="color: #007bff"><i class="fas fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a href="/Index" class="navbar-brand p-0">
+                        <h1 style="font-size:30px; font-family:'IBM Plex Mono'; font-weight:500; color:#007bff" class=" mb-0 nav-logo-text"><img src="~/Images/Logo/laptop.svg" width="100" alt="Alternate Text" />Computer Craft</h1>
+                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="/Index" class="nav-item nav-link active">Home</a>
+                            <a href="/Laptops" class="nav-item nav-link">Laptops</a>
+                            <a href="/Categories" class="nav-item nav-link">Categories</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Customer Service</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="/ReturnPolicy" class="dropdown-item">Retrun Policy</a>
+                                    <a href="/DeliveryGuide" class="dropdown-item">Quick Delivery Guide</a>
+                                    <a href="/TermsServices" class="dropdown-item">Terms of Service</a>
+                                </div>
+                            </div>
+                            <a href="/ContactUs" class="nav-item nav-link">Contact</a>
+                            <a href="/About" class="nav-item nav-link">About</a>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        <a href="tel:+96176906107" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay=".9s">
+                            <i class="fa fa-phone-alt fa-2x"></i>
+                            <div class="position-absolute" style="top: 7px; right: 12px;">
+                                <span><i class="fa fa-comment-dots text-secondary"></i></span>
+                            </div>
+                        </a>
+                        <div class="d-flex flex-column ms-3">
+                            <span>Call Computer Craft</span>
+                            <a href="tel:+96176906107"><span class="text-dark">Free: +96176906107</span></a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!--Carousel Ads in Website-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Images/Ads/ads.webp" class="d-block w-100" alt="Ads">
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/Ads/apple.png" class="d-block w-100" alt="apple">
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/Ads/gaming.png" class="d-block w-100" alt="gaming">
+            </div>
+            <div class="carousel-item">
+                <img src="/Images/Ads/smart.png" class="d-block w-100" alt="smartwatch">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="bg-light text-dark pt-5 p-4">
+        <div class="container text-center text-md-left">
+            <div class="row text-center text-md-left">
+                <!-- About Us Section -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-light text-dark">About Us</h5>
+                    <hr class="mb-4" />
+                    <p>
+                        We are providing a great collection of laptops for you. Please browse to get your desired Laptop from Our Wide Selection of Branded Laptop Collection and at the most affordable Price in Lebanon.
+                    </p>
+                    <!-- Logo Image -->
+                    <img src="~/Images/Logo/laptop.svg" alt="Logo" width="100" class="img-fluid mt-3">
+                </div>
+                <!-- Related Links Section -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-light text-dark">Related Links</h5>
+                    <hr class="mb-4" />
+                    <p>
+                        <a href="/Index" class="text-muted" <i class="fas fa-home">>Home</a>
+                    </p>
+                    <p>
+                        <a href="/Laptops" class="text-muted" <i class="fas fa-shop">>Store</a>
+                    </p>
+                    <p>
+                        <a href="/LoginAs" class="text-muted" <i class="fas fa-sign-in-alt">>Signin</a>
+                    </p>
+                    <p>
+                        <a href="/Register" class="text-muted" <i class="fas fa-user-plus"></i>>Signup</a>
+                    </p>
+                </div>
+                <!-- Our Branches Section -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-light text-dark">Our Branches</h5>
+                    <hr class="mb-4" />
+                    <h5 class="text-dark">
+                        Lebanon Branch
+                    </h5>
+                    <p class="text-muted">
+                        Beirut, Beirut Governorate, Lebanon
+                    </p>
+                </div>
+                <!-- Get in Touch Section -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-light text-dark">Get in Touch</h5>
+                    <hr class="mb-4" />
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i>  Beirut, Beirut Governorate, Lebanon
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope"></i> computercraft@gmail.com
+                    </p>
+                    <p>
+                        <a href="#" class="text-dark me-2" style="text-decoration:none"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-dark me-2" style="text-decoration:none"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="text-dark me-2" style="text-decoration:none"><i class="fab fa-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <!--Copyright Start-->
+    <div class="bg-dark text-white text-center py-3" style="font-family'Karla'">
+        <p class="mb-0">&copy; 2024 Computer Craft. All Rights Reserved.</p>
+        <p class="mb-">Developed and Design by Ali Hussein and Batoul Shoughri</p>
+    </div>
+    <!--Copyright End-->
+
+
+        <!-- Floating Buttons -->
+    <div class="floating-buttons">
+        <button class="btn btn-dark" id="btnBackToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <a href="/Repair" class="btn btn-dark">
+            <i class="fas fa-wrench"></i>
+            <span class="btn-text">Fix Appointment</span>
+        </a>
+    </div>
+
+    <!--Script to scroll to top-->
+    <script>
+        const btnBackToTop = document.getElementById('btnBackToTop');
+
+        btnBackToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    @* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/wow/wow.min.js"></script>
+    <script src="~/lib/easing/easing.min.js"></script>
+    <script src="~/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/lib/counterup/counterup.min.js"></script>
+    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="~/lib/owlcarousel/owl.carousel.min.js"></script> *@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

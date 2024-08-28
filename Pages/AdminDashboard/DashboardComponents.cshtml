@@ -1,0 +1,364 @@
+﻿@page
+@model Computer_Craft.Pages.AdminDashboard.DashboardComponentsModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Components</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/adminstyle.css">
+    <link rel="icon" href="~/Images/Logo/laptop.svg" type="image/x-icon" />
+    <style>
+        /* General button styles */
+        button {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 2px;
+            width: 100px;
+        }
+
+
+        .recent-products a {
+            text-align: center;
+            display: block;
+            /* margin: 1rem auto; */
+            /* color: var(--color-primary); */
+        }
+
+        .btn {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 2px;
+        }
+
+        .btn-update {
+            background-color: #007bff;
+            color: white;
+        }
+
+            .btn-update:hover {
+                background-color: #0056b3;
+            }
+
+        /* Delete button styles */
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+
+            .btn-delete:hover {
+                background-color: #c82333;
+            }
+
+        /* View button styles */
+        .btn-view {
+            background-color: #28a745;
+            color: white;
+        }
+
+            .btn-view:hover {
+                background-color: #218838;
+            }
+
+        form input[type="submit"], a {
+            cursor: pointer; /* Ensure the cursor changes to a pointer */
+        }
+
+        /* Add New Laptop button styles */
+        .btn-add-new {
+            background-color: #0056b3; /* Change to a different color */
+            color: white;
+            border-radius: 10px; /* Rounded corners */
+            padding: 10px 20px; /* Adjust padding */
+            font-size: 16px; /* Increase font size */
+            text-transform: uppercase; /* Uppercase text */
+            font-weight: bold; /* Bold text */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
+            float: right;
+            transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+        }
+
+            .btn-add-new:hover {
+                background-color: #0056b3; /* Darker shade on hover */
+                transform: scale(1.05); /* Slightly enlarge on hover */
+            }
+
+        /* Styling for table images */
+        table img {
+            max-width: 50px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Optional: add some space around table rows */
+        table tr {
+            padding: 8px 0;
+        }
+
+        main .recent-products table {
+            background-color: var(--color-white);
+            width: 140%; /* Adjusted width to fit container */
+            padding: var(--card-padding);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            border-radius: var(--card-border-radius);
+            transition: all 0.3s ease;
+        }
+        /* Align buttons in a row */
+        .action-buttons {
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .recent-products {
+            margin-bottom: 20px;
+        }
+
+        /* Style for the search section container */
+        .search-section {
+            margin-bottom: 20px; /* Space below the search section */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Space between input and button */
+        }
+
+        /* Style for the search input field */
+        #searchInput {
+            width: 300px; /* Adjust width as needed */
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+            #searchInput:focus {
+                border-color: #007bff; /* Change border color on focus */
+                box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Blue shadow on focus */
+            }
+
+        /* Style for the search button */
+        #searchButton {
+            padding: 8px 16px;
+            font-size: 14px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+            #searchButton:hover {
+                background-color: #0056b3; /* Darker shade on hover */
+                transform: scale(1.05); /* Slightly enlarge on hover */
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <!--!Font Awesome Free 6.6.0 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#007bff" d="M218.3 8.5c12.3-11.3 31.2-11.3 43.4 0l208 192c6.7 6.2 10.3 14.8 10.3 23.5l-144 0c-19.1 0-36.3 8.4-48 21.7l0-37.7c0-8.8-7.2-16-16-16l-64 0c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l64 0 0 128-160 0c-26.5 0-48-21.5-48-48l0-112-32 0c-13.2 0-25-8.1-29.8-20.3s-1.6-26.2 8.1-35.2l208-192zM352 304l0 144 192 0 0-144-192 0zm-48-16c0-17.7 14.3-32 32-32l224 0c17.7 0 32 14.3 32 32l0 160 32 0c8.8 0 16 7.2 16 16c0 26.5-21.5 48-48 48l-48 0-192 0-48 0c-26.5 0-48-21.5-48-48c0-8.8 7.2-16 16-16l32 0 0-160z" />
+                    </svg>
+                    <h2>Computer<span class="danger"> Craft</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <!-- Sidebar links here -->
+                <a href="/AdminDashboard/Dashboard">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/AdminDashboard/Orders">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="/AdminDashboard/Users">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardDesktop">
+                    <span class="material-icons-sharp">desktop_windows</span>
+                    <h3>Desktops</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardLaptop">
+                    <span class="material-icons-sharp">laptop_mac</span>
+                    <h3>Laptops</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardNetwork" >
+                    <span class="material-icons-sharp">router</span>
+                    <h3>Network Parts</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardSecurity">
+                    <span class="material-icons-sharp">vpn_key</span>
+                    <h3>Security Parts</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardComponents" class="active">
+                    <span class="material-icons-sharp">important_devices</span>
+                    <h3>Components</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardAccessories">
+                    <span class="material-icons-sharp">phonelink</span>
+                    <h3>Accessories</h3>
+                </a>
+                <a href="/AdminDashboard/AddAdmin">
+                    <span class="material-icons-sharp">person_add</span>
+                    <h3>New Admin</h3>
+                </a>
+                <a href="/Logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        
+        <main>
+            <h1>Components</h1>
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="Search by Serial Number or Name" />
+                <button id="searchButton" class="btn btn-view">Search</button>
+            </div>
+
+            <div class="recent-products">
+                <div style="margin-bottom: 20px;">
+                    <a href="~/AdminDashboard/AddProduct" class="btn-add-new">Add New Component</a>
+                </div>
+                <h2>All Components</h2>
+                <table id="productTable">
+                    <thead>
+                        <tr>
+                            <th>Serial Number</th>
+                            <th>Image</th>
+                            <th>Brand</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Stock Quantity</th>
+                            <th>Supplier Name</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example laptop rows -->
+                        @{
+                            foreach (var component in Model.ComponentAdminList)
+                            {
+                                <tr>
+                                    <td>@component.SerialNumber</td>
+                                    <td><img src="/Images/@component.Image"></td>
+                                    <td>@component.Brand</td>
+                                    <td>@component.Name</td>
+                                    <td>@component.Price</td>
+                                    <td>@component.TotalQuantity</td>
+                                    <td>@component.Supplier</td>
+                                    <td>@component.Description</td>
+                                    <td class="action-buttons">
+                                        <button class="btn-update" onclick="redirectToUpdate('@component.SerialNumber', '@component.Brand')">Update</button>                                        <form asp-page-handler="delete" asp-route-id="@component.SerialNumber" method="post">
+                                            <button type="submit" class="btn-delete" data-id="@component.SerialNumber">Delete</button>
+                                        </form>
+
+                                        <button class="btn-view" onclick="redirectToDetail('@component.SerialNumber')">Details</button>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.btn-delete').forEach(function (button) {
+                button.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default form submission
+
+                    const form = this.closest('form'); // Find the closest form element
+
+                    Swal.fire({
+                        title: 'Are you sure?',
+                        text: "You won't be able to revert this!",
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Yes, delete it!',
+                        cancelButtonText: 'No, cancel!'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            form.submit(); // Submit the form if confirmed
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+        function redirectToDetail(id) {
+            window.location.href = `/AdminDashboard/ProductDetail?id=${id}`;
+        }
+    </script>
+    <script>
+        function redirectToUpdate(id, brandName) {
+            const encodedBrandName = encodeURIComponent(brandName); // Encode the brand name to handle special characters
+            window.location.href = `/AdminDashboard/UpdateProduct?id=${id}&brand=${encodedBrandName}`;
+        }
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to filter table rows based on search input
+            function filterTable(tableId, searchValue) {
+                const table = document.getElementById(tableId);
+                const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+                for (let i = 0; i < rows.length; i++) {
+                    const serialNumberCell = rows[i].getElementsByTagName('td')[0]; // Serial Number is in the 1st column
+                    const nameCell = rows[i].getElementsByTagName('td')[3]; // Name is in the 4th column
+
+                    const serialNumberText = serialNumberCell.textContent || serialNumberCell.innerText;
+                    const nameText = nameCell.textContent || nameCell.innerText;
+
+                    if (serialNumberText.toLowerCase().indexOf(searchValue) > -1 || nameText.toLowerCase().indexOf(searchValue) > -1) {
+                        rows[i].style.display = '';
+                    } else {
+                        rows[i].style.display = 'none';
+                    }
+                }
+            }
+
+            // Attach event listener to the search input field for live search
+            document.getElementById('searchInput').addEventListener('input', function () {
+                const searchValue = this.value.toLowerCase();
+                filterTable('productTable', searchValue);
+            });
+        });
+
+    </script>
+    <script src="~/js/dashboard.js"></script>
+</body>
+</html>

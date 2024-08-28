@@ -1,0 +1,216 @@
+﻿@page
+@model ResgisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="~/css/register.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        /* General styling for form inputs */
+        .form-control {
+            border-radius: 0; /* Sharp borders */
+            border: 1px solid #007bff !important; /* Border color */
+            box-shadow: none; /* Remove default shadow */
+        }
+
+            .form-control:focus {
+                border-color: #007bff !important; /* Border color on focus */
+                box-shadow: none; /* Remove default shadow */
+            }
+
+        /* Styling for the submit button */
+        .btn-primary {
+            border-radius: 0; /* Sharp corners (rectangle) */
+            background-color: #007bff ; /* Button background color */
+            border-color: #007bff ; /* Button border color */
+            color: white; /* Button text color */
+            font-weight: bold; /* Make text bold */
+        }
+
+            .btn-primary:hover {
+                background-color: whitesmoke; /* Background color on hover */
+                color: #007bff ; /* Text color on hover */
+                border-color: var(--bs-dark); /* Border color on hover */
+            }
+
+        /* Styling for modal close button */
+        #close-model {
+            background-color: #007bff !important; /* Button background color */
+            border-color: #007bff !important; /* Button border color */
+            border-radius: 0; /* Sharp corners */
+            color: white; /* Button text color */
+        }
+
+            #close-model:hover {
+                background-color: white; /* Background color on hover */
+                color: var(--bs-dark); /* Text color on hover */
+                border-color: var(--bs-dark); /* Border color on hover */
+            }
+
+    </style>
+</head>
+<body data-message-type="@Model.MessageType" data-message-text="@Model.MessageText">
+    <div class="container mt-5">
+        <p class="text-muted text-center">
+            <a class="text-muted" href="/Index">Home</a> / Create Account
+        </p>
+        <h2 class="text-center" style="font-family:'Karla'">New Account</h2>
+
+        <form method="post" id="registrationForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nationalnb">National ID Number (رقم بطاقة الهوية)</label>
+                    <input type="text" class="form-control" id="nationalnb" name="national" />
+                    <div id="nationalIdError" role="alert" class="alert alert-danger d-none">National number must start with '0000' and be exactly 12 digits.</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username"/>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name (الاسم)</label>
+                    <input type="text" class="form-control" id="firstName" name="fname" placeholder="Enter First Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name (اسم العائلة)</label>
+                    <input type="text" class="form-control" id="lastName" name="lname" placeholder="Enter Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                        <i class="fas fa-eye-slash" id="togglePassword" aria-hidden="true"></i>
+                    </div>
+                    <small id="passwordHelp" class="form-text text-muted">
+                        <ul>
+                            <li id="lengthCheck" class="text-danger">At least 8 characters long</li>
+                            <li id="numberCheck" class="text-danger">Contains at least one number</li>
+                            <li id="capitalCheck" class="text-danger">Contains at least one capital letter</li>
+                            <li id="characterCheck" class="text-danger">Contains at least one lowercase letter</li>
+                            <li id="specialCheck" class="text-danger">Contains at least one special character (!, $, #, &, /, *, ?, %, .)</li>
+                        </ul>
+                    </small>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="password-container">
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmpass" placeholder="Confirm Password" required>
+                        <i class="fas fa-eye-slash" id="toggleConfirmPassword" aria-hidden="true"></i>
+                    </div>
+                    <br />
+                    <div class="alert alert-danger d-none" role="alert" id="confirmPasswordError">
+                        Error: Passwords Do Not Match
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phoneNumber">Phone Number (رقم الهاتف)</label>
+                    <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number" name="phone">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="country">Country (البلد)</label>
+                    <select class="form-control" id="country" required name="country">
+                        <!-- Arab Countries -->
+                        <option value="Lebanon" selected>Lebanon</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="Bahrain">Bahrain</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="Iraq">Iraq</option>
+                        <option value="Jordan">Jordan</option>
+                        <option value="Kuwait">Kuwait</option>
+                        <option value="Libya">Libya</option>
+                        <option value="Oman">Oman</option>
+                        <option value="Palestine">Palestine</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="Morocco">Morocco</option>
+                        <option value="Saudi Arabia">Saudi Arabia</option>
+                        <option value="Sudan">Sudan</option>
+                        <option value="Syria">Syria</option>
+                        <option value="Tunisia">Tunisia</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="United Arab Emirates">United Arab Emirates</option>
+                        <option value="South Sudan">South Sudan</option>
+                        <option value="Mauritania">Mauritania</option>
+
+                        <!-- Non-Arab Countries -->
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="China">China</option>
+                        <option value="United States">United States</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Italy">Italy</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="South Africa">South Africa</option>
+
+
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="state">Region (المنطقة)</label>
+                    <select class="form-control" id="region" required name="region" >
+                        <option value="0">Choose Your Region</option>
+                        <option value="Beirut">Beirut بيروت</option>
+                        <option value="South">South الجنوب</option>
+                        <option value="North">North الشمال</option>
+                        <option value="Beqaa">Al Beqaa البقاع</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="city">Town (البلدة)</label>
+                    <input type="text" class="form-control" name="town" id="city" placeholder="Enter Your City">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="street">Street (اسم الشارع)</label>
+                    <input type="text" class="form-control" name="street" id="street" placeholder="Enter Your Street">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="building">Building (اسم المبنى)</label>
+                    <input type="text" class="form-control" name="building" id="building" placeholder="Enter Your Building Name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="floor">Floor (الطابق)</label>
+                    <input type="number" class="form-control" name="floor" id="floor" placeholder="Enter Your Floor Number">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/js/registerscript.js"></script>
+</body>
+</html>
