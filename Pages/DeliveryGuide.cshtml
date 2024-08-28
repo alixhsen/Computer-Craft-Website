@@ -1,0 +1,128 @@
+﻿@page
+@model Computer_Craft.Pages.DeliveryQuideModel
+@{
+    ViewData["Title"] = "Delivey Guide";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Delivery Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Karla, sans-serif;
+        }
+
+        .delivery-guide {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+            .delivery-guide h1 {
+                margin-bottom: 20px;
+            }
+
+            .delivery-guide p {
+                margin-bottom: 20px;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .note {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="delivery-guide">
+        <p class="text-muted text-center">
+            <a class="text-muted" href="/Index">Home</a> / Quick Delivery Guide
+        </p>
+        <h1>Quick Delivery Guide</h1>
+        <p>Welcome to our District Delivery Times page, where we are committed to providing you with a seamless and swift free delivery experience. Our dedicated logistic team works tirelessly to ensure your orders are prepared and delivered professionally. The tables below outline the expected delivery times for each district, measured in business days. It's important to note that these times exclude weekends (Saturday and Sunday), even though we do offer Saturday deliveries with our logistic team operating at minimal capacity. Additionally, please be aware that occasional product shortages may impact delivery times, with potential delays of 1-2 days beyond the initially estimated delivery date. In such instances, our online team will promptly communicate with you, offering the choice to proceed with the delivery or explore alternative options. Your satisfaction is our priority, and we appreciate your understanding as we strive to continuously enhance our services.</p>
+
+        <p>Our unique free delivery service brings convenience to every district, with no minimum order requirement. Experience hassle-free shopping with Computer Craft, where speedy and complimentary delivery is our commitment to you.</p>
+
+        <p class="note">In the rare event of any delays or unexpected incidents, we encourage you to report them to computercraft@gmail.com. Your feedback is invaluable in helping us address and resolve issues promptly, ensuring that you receive the top-notch service you deserve.</p>
+
+        <p class="note">Due to the recent military attacks at the southern border, our logistics partners are unable to deliver orders to villages within 5-7 km from the border.</p>
+
+        <h2>Delivery Within 24 - 48 Hours</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Beirut</td></tr>
+                <tr><td>Baabda</td></tr>
+                <tr><td>Matn</td></tr>
+                <tr><td>Byblos</td></tr>
+                <tr><td>Miniyeh - Danniyeh</td></tr>
+                <tr><td>Nabatiyeh</td></tr>
+                <tr><td>Sidon</td></tr>
+                <tr><td>Tyre</td></tr>
+                <tr><td>Tripoli</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Delivery Within 24 - 72 Hours</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Aley</td></tr>
+                <tr><td>Batroun</td></tr>
+                <tr><td>Bsharri</td></tr>
+                <tr><td>Chouf (Beiteddine)</td></tr>
+                <tr><td>Keserwan (Jounieh)</td></tr>
+                <tr><td>Koura (Amioun)</td></tr>
+                <tr><td>Zgharta</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Delivery Within 3 - 5 Business Days</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Akkar</td></tr>
+                <tr><td>Baalbek</td></tr>
+                <tr><td>Bint Jbeil</td></tr>
+                <tr><td>Hasbaya</td></tr>
+                <tr><td>Hermel</td></tr>
+                <tr><td>Jezzine</td></tr>
+                <tr><td>Marjeyoun</td></tr>
+                <tr><td>Rashaya</td></tr>
+                <tr><td>Western Beqaa</td></tr>
+                <tr><td>Zahle</td></tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

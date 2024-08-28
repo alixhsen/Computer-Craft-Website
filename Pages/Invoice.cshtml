@@ -1,0 +1,263 @@
+﻿@page
+@model Computer_Craft.Pages.InvoiceModel
+@{
+    Layout = null;
+    var subtotal = Model.invoice.orders.TotalPrice;
+    var tax = (double)subtotal * 0.10;
+    var grandTotal = (double)subtotal + tax;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - Computer Craft</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        page {
+            size: A4;
+            margin: 20mm;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 11pt;
+            color: #000;
+        }
+
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .invoice-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007bff;
+        }
+
+        .invoice-header .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .invoice-header .invoice-title {
+            margin-top: 5px;
+            font-size: 1.25rem;
+            color: #007bff;
+            text-transform: uppercase;
+        }
+
+        .invoice-details, .billing-details {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .invoice-details p, .billing-details p {
+            font-size: 11pt;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 750px;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        .table th, .table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #dee2e6;
+        }
+
+        .table th {
+            background-color: #dee2e659;
+            color: black;
+            text-transform: uppercase;
+            font-size: 12pt;
+            font-weight: bold;
+        }
+
+        .table tfoot td {
+            font-size: 11pt;
+            font-weight: bold;
+        }
+
+        .table tfoot tr:last-child td {
+            color: #007bff;
+            font-size: 13pt;
+        }
+
+        .invoice-footer {
+            text-align: center;
+            margin-top: 150px;
+            padding-top: 20px;
+            border-top: 2px solid #007bff;
+        }
+
+        .invoice-footer .footer-logo {
+            font-size: 1.5rem;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .invoice-footer .footer-contact {
+            font-size: 11pt;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+       .btn-return-home, .btn-generate-pdf {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            font-size: 12pt;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 5px;
+            margin: 10px;
+            height: 45px;
+        }
+
+        .btn-return-home:hover, .btn-generate-pdf:hover {
+            background-color: white;
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        .btn-return-home:focus, .btn-generate-pdf:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container" id="invoice">
+        <div class="invoice-header">
+            <div class="logo">Computer Craft</div>
+            <div class="invoice-title">Invoice</div>
+        </div>
+
+        <div class="invoice-details">
+            <div>
+                <p>
+                    <strong>Payment Date:</strong> @Model.invoice.orders.OrderDate<br>
+                    <strong>Receipt #:</strong> INV-@Model.currentYear@Model.invoice.orders.OrderId
+                </p>
+            </div>
+            <div>
+                <p>
+                    <strong>Company Name:</strong> Computer Craft<br>
+                    <strong>Address:</strong> Beirut, Lebanon<br>
+                    <strong>Email:</strong> support@computercraft.com<br>
+                    <strong>Phone:</strong> +96176906107
+                </p>
+            </div>
+        </div>
+
+        <div class="billing-details">
+            <div>
+                <p>
+                    <strong>Sold To:</strong><br>
+                    @Model.invoice.CustomerName<br>
+                    @Model.invoice.Address<br>
+                    @Model.invoice.Email<br>
+                    @Model.invoice.Phone
+                </p>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cart in Model.invoice.carts)
+                    {
+                        <tr>
+                            <td>@cart.Name</td>
+                            <td>@cart.CartQuantity</td>
+                            <td>@cart.Price $</td>
+                            <td>@(cart.Price * cart.CartQuantity) $</td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3" class="text-right">Subtotal</td>
+                        <td>@Model.invoice.orders.TotalPrice $</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-right">Tax (10%)</td>
+                        <td>@tax $</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="text-right">Total Due</td>
+                        <td>@grandTotal $</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <div class="invoice-footer">
+
+            <div class="footer-logo">Computer Craft</div>
+            <p class="footer-contact">
+                Thank you for your business!<br />
+                If you have any questions, please contact us at support@computercraft.com or call +96176906107.
+            </p>
+            <p>
+                <strong>ملاحظة:</strong> هذه الفاتورة ليست رسمية - ستحصل على الفاتورة الرسمية عند تسديد المبلغ 
+            </p>
+        </div>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn-generate-pdf" onclick="generatePDF()">Generate PDF</button>
+        <form method="post">
+            <input type="submit" class="btn-return-home" value="Return to Home" />
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script>
+        function generatePDF() {
+            var element = document.getElementById('invoice');
+            html2pdf(element, {
+                margin: 10,
+                filename: 'ComputerCraft Invoice-@Model.invoice.orders.OrderId .pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+﻿@page
+@model Computer_Craft.Pages.AdminDashboard.ProductDetailModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add New Laptop</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/adminstyle.css">
+    <link rel="icon" href="~/Images/Logo/laptop.svg" type="image/x-icon" />
+    <style>
+        /* General button styles */
+        button, .btn-save, a {
+            border: none;
+            border-radius: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 2px;
+        }
+
+        /* Save button styles */
+        .btn-save {
+            background-color: #007bff;
+            color: white;
+        }
+
+            .btn-save:hover {
+                background-color: #0056b3;
+            }
+
+        /* Cancel button styles */
+        .btn-cancel {
+            background-color: #dc3545;
+            color: white;
+        }
+
+            .btn-cancel:hover {
+                background-color: #c82333;
+            }
+
+        /* Link button styles */
+        .btn-link {
+            background-color: #6c757d;
+            color: white;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 10px;
+        }
+
+            .btn-link:hover {
+                background-color: #5a6268;
+            }
+
+        /* Form container styling */
+        .form-container {
+            width: 140%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--color-white);
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+            .form-container h2 {
+                margin-bottom: 20px;
+                font-size: 1.6rem;
+                color: var(--color-dark);
+            }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+
+            .form-section h3 {
+                font-size: 1.4rem;
+                color: var(--color-primary);
+                margin-bottom: 10px;
+            }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+            .form-group label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+
+            .form-group input, .form-group select {
+                width: 100%;
+                padding: 8px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+
+                .form-group input[type="file"] {
+                    padding: 3px;
+                }
+
+        .form-actions {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                        <!--!Font Awesome Free 6.6.0 by fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#007bff" d="M218.3 8.5c12.3-11.3 31.2-11.3 43.4 0l208 192c6.7 6.2 10.3 14.8 10.3 23.5l-144 0c-19.1 0-36.3 8.4-48 21.7l0-37.7c0-8.8-7.2-16-16-16l-64 0c-8.8 0-16 7.2-16 16l0 64c0 8.8 7.2 16 16 16l64 0 0 128-160 0c-26.5 0-48-21.5-48-48l0-112-32 0c-13.2 0-25-8.1-29.8-20.3s-1.6-26.2 8.1-35.2l208-192zM352 304l0 144 192 0 0-144-192 0zm-48-16c0-17.7 14.3-32 32-32l224 0c17.7 0 32 14.3 32 32l0 160 32 0c8.8 0 16 7.2 16 16c0 26.5-21.5 48-48 48l-48 0-192 0-48 0c-26.5 0-48-21.5-48-48c0-8.8 7.2-16 16-16l32 0 0-160z" />
+                    </svg>
+                    <h2>Computer<span class="danger"> Craft</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">close</span>
+                </div>
+            </div>
+            <div class="sidebar">
+                <!-- Sidebar links here -->
+                <a href="/AdminDashboard/Dashboard">
+                    <span class="material-icons-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="/AdminDashboard/Orders">
+                    <span class="material-icons-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+                <a href="/AdminDashboard/Users">
+                    <span class="material-icons-sharp">person_outline</span>
+                    <h3>Users</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardDesktop">
+                    <span class="material-icons-sharp">desktop_windows</span>
+                    <h3>Desktops</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardLaptop">
+                    <span class="material-icons-sharp">laptop_mac</span>
+                    <h3>Laptops</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardNetwork">
+                    <span class="material-icons-sharp">router</span>
+                    <h3>Network Parts</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardSecurity">
+                    <span class="material-icons-sharp">vpn_key</span>
+                    <h3>Security Parts</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardComponents">
+                    <span class="material-icons-sharp">important_devices</span>
+                    <h3>Components</h3>
+                </a>
+                <a href="/AdminDashboard/DashboardAccessories">
+                    <span class="material-icons-sharp">phonelink</span>
+                    <h3>Accessories</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">person_add</span>
+                    <h3>New Admin</h3>
+                </a>
+                <a href="/Logout">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Add New Laptop</h1>
+            <div class="form-container">
+                <form method="post">
+                    <!-- Basic Info Section -->
+                    <div class="form-section">
+                        <h3>Basic Information</h3>
+                        <div class="form-group">
+                            <label for="serialNumber">Serial Number:</label>
+                            <input type="text" id="serialNumber" name="serialNumber" value="@Model.serial" readonly />
+                        </div>
+                        <div class="form-group">
+                            <img src="/Images/@Model.product.Image" style="max-width=50px; height=auto; bprder-radius=5px" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="@Model.product.Name" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand">Brand:</label>
+                            <input type="text" name="brand" value="@Model.product.Brand" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label for="price">Price:</label>
+                            <input type="number" id="price" name="price" step="0.01" value="@Model.product.Price" readonly>
+                        </div>
+                    </div>
+
+
+                    <!-- Additional Info Section -->
+                    <div class="form-section">
+                        <h3>Additional Information</h3>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="4" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;" readonly>@Model.product.Description</textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="quantity">Quantity in Stock:</label>
+                            <input type="number" id="quantity" name="stockQuantity" value="@Model.product.TotalQuantity" readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="supplier">Supplier:</label>
+                            <input type="text" name="supplier" value="@Model.product.Supplier" readonly />
+                        </div>
+                    </div>
+
+                    <a href="/AdminDashboard/Dashboard" class="btn-cancel">Return</a>
+                </form>
+            </div>
+        </main>
+        <div class="right-section">
+            <div class="nav">
+                <button id="menu-btn">
+                    <span class="material-icons-sharp">menu</span>
+                </button>
+                <div class="dark-mode">
+                    <span class="material-icons-sharp active">light_mode</span>
+                    <span class="material-icons-sharp">dark_mode</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/js/dashboard.js"></script>
+</body>
+</html>

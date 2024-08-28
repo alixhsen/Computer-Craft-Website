@@ -1,0 +1,159 @@
+﻿@page
+@model Computer_Craft.Pages.DetailsModel
+@using Computer_Craft.Models;
+@{
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-image {
+            width: 100%; /* Set the width to 100% of the container */
+            height: auto; /* Maintain aspect ratio */
+            max-height: 400px; /* Set a maximum height */
+            object-fit: cover; /* Cover the container */
+        }
+
+        .btn-cart {
+            background-color: #007bff; /* Change this to your preferred color */
+            color: white;
+            padding: 10px 40px;
+            font-size: 16px;
+            text-transform: uppercase;
+            border: 1;
+            border-radius: 0;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-cart:hover {
+                background-color: white; /* Slightly darker shade for hover effect */
+                color: #007bff;
+                border-color: #007bff;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+        }
+
+        .btn-cart:disabled {
+            background-color: #6c757d; /* Change to a disabled color */
+            border-color: #6c757d;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <p class="text-muted text-start">
+            <a class="text-muted" href="/Index">Home</a> / <a class="text-muted" href="/Laptops">Laptops</a> / @Model.computers.Name
+        </p>
+        <br />
+        <!-- Error message -->
+        <div id="error-message" class="error-message"></div>
+        <div class="row">
+            <!-- Product Image -->
+            <div class="col-md-6">
+                <img src="/Images/@Model.computers.Image" class="product-image img-fluid" alt="Product Image">
+            </div>
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h4>@Model.computers.Name</h4>
+                <hr />
+                <p><span class="font-weight-bold">Serial Number:</span> @Model.computers.SerialNumber</p>
+                <p><span class="font-weight-bold">Price:</span> $ @Model.computers.Price</p>
+                <p><span class="font-weight-bold">Quantity in Stock:</span> @Model.computers.TotalQuantity</p>
+                <!-- Quantity Selection and Total Price -->
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" class="form-control" value="1" min="1" onchange="validateQuantity()" oninput="validateQuantity()">
+                </div>
+                <div class="mb-3">
+                    <label for="totalPrice" class="form-label">Total Price</label>
+                    <input type="text" id="totalPrice" class="form-control" value="@Model.computers.Price" readonly>
+                </div>
+                <!-- Add to Cart Button -->
+                <div class="mb-3">
+                    <form method="post">
+                        <input type="hidden" name="productId" value="@Model.computers.SerialNumber" />
+                        <input type="hidden" name="quantity" id="hiddenQuantity" value="1" />
+                        <button type="submit" id="addToCartButton" class="btn btn-cart">Add to Cart</button>
+                    </form>
+                </div>
+                <p class="text-muted">Shipping: Free Shipping</p>
+                <p class="text-primary">
+                    For pricing details, please request a quotation by emailing us at computercraft@gmail.com.
+                </p>
+                <div class="mb-3">
+                    <a href="" class="btn btn-success"><i class="fab fa-whatsapp"></i> Contact Us on WhatsApp</a>
+                </div>
+            </div>
+            <br />
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Description</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane border-0 fade show active" id="description-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <br />
+                    <h5>@Model.computers.Name</h5>
+                    <p>@Model.computers.Description</p>
+                    <p><b>RAM:</b> @Model.computers.RAM</p>
+                    <p><b>CPU:</b> @Model.computers.CPU</p>
+                    <p><b>Memory:</b> @Model.computers.Memory</p>
+                    <p><b>Display:</b> @Model.computers.Display</p>
+                    <p><b>Color:</b> @Model.computers.Color</p>
+                    <p><b>Operating System:</b> @Model.computers.OS</p>
+                    <p><b>Touch Screen:</b> @Model.computers.Touchscreen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function validateQuantity() {
+            const stockQuantity = @Model.computers.TotalQuantity;
+            const quantityInput = document.getElementById('quantity');
+            const errorMessage = document.getElementById('error-message');
+            const addToCartButton = document.getElementById('addToCartButton');
+
+            const enteredQuantity = parseInt(quantityInput.value);
+
+            if (enteredQuantity > stockQuantity) {
+                errorMessage.textContent = 'The requested quantity exceeds the available stock.';
+                quantityInput.classList.add('is-invalid');
+                addToCartButton.disabled = true; // Disable the button
+            } else {
+                errorMessage.textContent = '';
+                quantityInput.classList.remove('is-invalid');
+                addToCartButton.disabled = false; // Enable the button
+            }
+
+            // Update total price
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            const price = @Model.computers.Price;
+            const quantity = document.getElementById('quantity').value;
+            const total = price * quantity;
+            document.getElementById('totalPrice').value = '$' + total.toFixed(2);
+            document.getElementById('hiddenQuantity').value = quantity;
+        }
+
+        // Initialize button state on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            validateQuantity();
+        });
+    </script>
+</body>
+</html>
